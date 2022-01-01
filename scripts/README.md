@@ -15,3 +15,9 @@ Make sure pearl compiler is installed
 ## autogit
 
 Small javascript app which automatically does some git thing. Made it bc Im too lazy running the commands myself
+
+### Usage
+
+Make sure node is installed
+
+`node ./index.js` starts the app. To actually run the autopush just run `fullpush <COMMIT MSG>`

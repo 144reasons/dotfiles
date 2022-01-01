@@ -20,7 +20,7 @@ rl.on('line', function(line) {
 	case 'fullpush':
 		if(!args) return console.log('No commit message defined');
 
-		exec(`git add . && git commit -m "${args}" && git push`, (error, stdout, stderr)=>{if(error) {console.log(`error:${error.message}`);return;}if(stderr) {console.log(`stderr:${stderr}`);return;}console.log(`stdout:${stdout}`);});
+		exec(`git add . && git commit -m "${args.join(" ")}" && git push`, (error, stdout, stderr)=>{if(error) {console.log(`error:${error.message}`);return;}if(stderr) {console.log(`stderr:${stderr}`);return;}console.log(`stdout:${stdout}`);});
 		break;
 	case 'exit':
 		console.log('Exiting program...');
