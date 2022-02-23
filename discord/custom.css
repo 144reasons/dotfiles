@@ -1,0 +1,297 @@
+@import url("https://zuzumi-f.github.io/classic-discord-status/2016-status.css");
+@import url('https://maendisease.github.io/BetterDiscordStuff/css/bettterInvites.css');
+@import url('https://Goose-Nest.github.io/GT-RevertRebrand/src/components/wordmark.css');
+@import url("https://dav1312.github.io/BD/SimpleBackground/main.css");
+
+/* Background */
+
+:root {
+    --background: url('https://i.imgur.com/DZsnDro.png');
+    --chat-transparency: 0.8;
+    --sides-transparency: 0.9;
+    --sides-blur: 5px;
+}
+
+/* Rounded Context Menu */
+.menu-1QACrS, .colorDefault-CDqZdO { 
+  border-radius: 20px; 
+}
+
+/* Home Icon Spin */
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(-20deg);
+    }
+    70% {
+        transform: rotate(380deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.pill-L_aLMQ.bd-selected + .listItemWrapper-3d87LP .homeIcon-r0w4ny {
+    animation: spin 0.8s ease;
+}
+
+/* Discord Message box v2 */
+:root {
+    --color-brand-lighter: #292929;
+}
+.input-2z42oC,
+.scrollableContainer-15eg7h {
+    background-color: #292929;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    border: 1px solid transparent;
+    outline: none;
+}
+.scrollableContainer-15eg7h {
+     border: 1px solid transparent;
+      border-radius: 10px; /* Edit this in order to change the shape of the text box */
+}
+.jumpToPresentBar-1cEnH0{
+    border: 1px solid transparent;
+     border-radius: 5px;
+      width: 370px;
+       margin-left: 1px;
+        margin-bottom: -3px!important;
+}
+
+/* Unclamp the About Me section, so it's not limited to just 6 lines. (normally it cuts off at 6 and adds a ...) */
+.clamped-2ZePhX{
+    -webkit-line-clamp: 190; /*Maximum amount of characters as new lines, unset just breaks links*/
+    max-height:112px;
+    overflow-x: hidden;
+    overflow-y:scroll;
+}
+.clamped-2ZePhX::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+.clamped-2ZePhX::-webkit-scrollbar-track {
+  border-radius: 10px; /*How round you want the scrollbar to be. 0 is square, 10px is round.*/
+  background-color: rgb(255 255 255 / 10%); /*Edit this to what color you want the track to be.*/
+}
+.clamped-2ZePhX::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #00aeff, #a68eff); /* Edit this to whatever color/colors you'd like*/
+  border-radius: 10px; /*How round you want the scrollbar thumb to be. 0 is square, 10px is round.*/
+}
+
+/* Removes Chatbox from channel that don't allow you to communicate */
+.channelTextAreaDisabled-8rmlrp, .channelTextAreaDisabled-8rmlrp > .scrollableContainer-2NUZem{
+  animation: nochat .000001ms forwards;
+}
+@keyframes nochat{
+  to{height: 0}
+}
+/* Removes Follow banner on bottom of channels */
+.wrapper-39oAo3 {display: none;}
+
+/* Remove Hypesquad Badges */
+img[src$="9f00b18e292e10fc0ae84ff5332e8b0b.svg"],img[src$="ec8e92568a7c8f19a052ef42f862ff18.svg"],img[src$="efcc751513ec434ea4275ecda4f61136.svg"]{display:none}
+
+/* Remove Hypesquad Options Tab */
+.side-8zPYf6 .item-PXvHYJ[aria-controls="hypesquad-online-tab"] {display:none}
+
+/* Selection colour */
+
+::selection {
+  background-color: purple;
+}
+
+/* Fuck nitro */
+
+/* nitro tab */
+.scroller-1bVxF5 .colorPremium-vwmYZQ,
+/* flower icon next to server name */
+.flowerStar-2tNFCR,
+.flowerStarContainer-1QeD-L,
+/* question mark when trying to change tag in user settings */
+.questionMark-3V9mGJ,
+/* billing tab in user settings */
+[aria-controls="connections-tab"]~*:nth-child(n+7):nth-child(-n+13),
+/* remove nitro label in user customization section */
+.customizationSection-IGy2fS:nth-child(3),
+/* remove stuff in server settings related to nitro */
+.emptyState-Ud44C9 .colorHeaderSecondary-g5teka, 
+.emptyState-Ud44C9 .stickersRow-3OJE_7,
+.container-1eD8xH,
+.emptyState-Ud44C9 .colorHeaderSecondary-g5teka, 
+.emptyState-Ud44C9 .stickersRow-3OJE_7,
+.shinyButton-2Q9MDB, 
+.premiumPromoDescription-1kf0Oa,
+.divider--oiTeJ+div+div+div,
+.children-1xdcWE .upsellContainer-22N_CL,
+.emptyTierWrapper-V5c-R7 .button-f2h6uQ,
+/* removes server banners */
+.animatedContainer-2laTjx, 
+.content-2a4AW9 [style="height: 84px;"], 
+.bannerImage-ubW8K-, 
+.animatedBannerHoverLayer-129r1v,
+/* removes gift button */
+.buttons-uaqb-5 > .button-f2h6uQ:not(.BD-TeX-plugin-button) > :not(.quickToggleButton-P2xDh8)
+{
+    display: none;
+}
+
+
+
+/* Removes nitro promotion when you press on disabled emojis */
+.premiumPromo-1eKAIB .premiumPromoTitle-3tWrPT{
+    font-size: 0;
+}
+.premiumPromo-1eKAIB .premiumPromoTitle-3tWrPT:before{
+    content:"Hello fellow user, You need nitro for this to work but its useless anyways so dont buy it!";
+    font-size: 20px;
+    text-align: center;
+    display:block;
+}
+
+
+/* Removes nitro promotion on custom stickers */
+.emptyState-Ud44C9 .header-24Iqpn{
+    font-size: 0px;
+}
+.emptyState-Ud44C9 .header-24Iqpn:before{
+    content:'Hello, You need nitro to use custom stickers but its useless so dont buy nitro!';
+    font-size: 24px;
+}
+
+/* Horizontal status picker */
+
+#status-picker {
+  margin-bottom: 5px;
+}
+
+#status-picker > div {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px;
+}
+
+.statusItem-33LqPf {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.statusItem-33LqPf > svg {
+  width: 16px;
+  height: auto;
+}
+
+#status-picker .item-1tOPte {
+  margin: 0;
+  width: 25%;
+}
+
+#status-picker .status-1fhblQ,
+#status-picker .description-2L932D,
+#status-picker .separator-2I32lJ:nth-child(2) {
+  display: none;
+}
+
+#status-picker .separator-2I32lJ,
+#status-picker #status-picker-custom-status {
+  display: block;
+  width: 100%;
+}
+
+#status-picker-custom-status .status-1fhblQ {
+  display: block;
+  margin-left: 6px;
+}
+
+/* Custom status colours */
+
+rect[fill^="hsl(262,"] {fill: purple}
+rect[fill^="hsl(139,"] {fill: rgb(156, 226, 91)}
+rect[fill^="hsl(38,"] {fill: #5e80f0}
+rect[fill^="hsl(359,"] {fill: rgb(247, 123, 123)}
+rect[fill^="hsl(214,"] {fill: rgb(0, 0, 0)}
+
+/* Revert font */
+
+html:root {
+  --font-display: var(--font-primary);
+}
+
+/* No more laggy settings */
+
+.layer-3QrUeG {
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+.layers-3iHuyZ>.layer-3QrUeG.animating-rRxada *,
+.layers-3iHuyZ>.layer-3QrUeG.animating-rRxada {
+  pointer-events: auto !important;
+  will-change: unset;
+}
+
+.animating-rRxada.stop-animations {
+  z-index: 100 !important;
+}
+
+/* Fuck nitro p2 */
+
+#private-channels [href="/store"] {display: none}
+
+/* Emote fix */
+
+img.emote {
+  text-indent: 0;
+  white-space: nowrap;
+  width: auto;
+  position: relative;
+  top: 0.25ex;
+}
+
+/* Custom Cursor */
+
+/* {cursor: url(https://imgur.com/Bo9eggr.png), url(https://imgur.com/Bo9eggr.png), auto !important;}
+
+/* Blur spoiler text instead hiding it */
+
+.spoilerText-27bIiA,
+.spoilerText-27bIiA.hidden-3B-Rum {
+    background-color: transparent !important;
+}
+
+.spoilerText-27bIiA.hidden-3B-Rum > .inlineContent-2YnoDy {
+    opacity: 1 !important;
+    filter: blur(3px);
+    pointer-events: unset;
+}
+
+/* Changes Channel-Banner order */
+
+.tabs-3L9Rgq {
+  flex-direction: row-reverse;
+}
+
+.tab-XC_yrg {
+  flex: 1;
+}
+
+[aria-controls="1-tab"] {margin: 0px 10px 0px 0px !important;}
+
+[aria-controls="0-tab"] {margin: 0px 0px 0px 10px !important;}
+
+/* Gif Trolling home button */
+
+.homeIcon-r0w4ny path {
+  fill: transparent;
+}
+
+.homeIcon-r0w4ny {
+  background: url("https://c.tenor.com/6mQFm9PXMSQAAAAC/d4dj.gif") center/cover no-repeat;
+  min-width: 45px;
+  min-height: 45px;
+}
